@@ -47,6 +47,19 @@
     <script src="~/App_ClientResources/App_Scripts/Index/index.main.js"></script>
 </head>
 <body>
+    <label for="txtIdIndicador">ID Indicador:</label>
+    <input type="text" value="" id="txtIdIndicador" />
+    <label for="cboTipo">Tipo:</label>
+    <select id="cboTipo">
+        <option selected="selected" value="U">Tipo U</option>
+        <option value="A">Tipo A</option>
+        <option value="B">Tipo B</option>
+    </select>
+    <label for="txtFechaInicio">Fecha Inicio:</label>
+    <input type="date" value="" id="txtFechaInicio" />
+    <label for="txtFechaFin">Fecha Fin:</label>
+    <input type="date" value="" id="txtFechaFin" />
+
     <button id="btnCargar">Cargar dashboard</button>
 
     <div>
@@ -56,7 +69,7 @@
        //settings.InitialDashboardId = "dashboard2";
        settings.Width = Unit.Percentage(100);
        settings.Height = Unit.Pixel(600);
-       settings.WorkingMode = WorkingMode.Viewer;
+       settings.WorkingMode = WorkingMode.Designer;
        settings.ClientSideEvents.BeforeRender = "dashboard_onBeforeRender";
    }).GetHtml()
     </div>

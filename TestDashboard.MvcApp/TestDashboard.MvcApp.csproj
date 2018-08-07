@@ -286,6 +286,8 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Infrastructure\Dashboard\AppCustomDashboardStorage.cs" />
+    <Compile Include="Infrastructure\Dashboard\AppCustomObjectDataSourceFillService.cs" />
+    <Compile Include="Infrastructure\Dashboard\DashboardUtilities.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

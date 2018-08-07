@@ -1,4 +1,6 @@
+using System.Data;
 using System.Web.Routing;
+using DevExpress.DashboardCommon;
 using DevExpress.DashboardWeb;
 using DevExpress.DashboardWeb.Mvc;
 using TestDashboard.MvcApp.Infrastructure.Dashboard;
@@ -8,17 +10,15 @@ namespace TestDashboard.MvcApp {
         public static void RegisterService(RouteCollection routes) {
             routes.MapDashboardRoute();
 
-            // Uncomment this line to save dashboards to the App_Data folder.
-            //DashboardConfigurator.Default.SetDashboardStorage(new DashboardFileStorage(@"~/App_Data/"));
+            DashboardConfigurator.Default.SetDashboardStorage(new AppCustomDashboardStorage());
+            DashboardConfigurator.Default.SetObjectDataSourceCustomFillService(new AppCustomObjectDataSourceFillService());
 
-            // Uncomment these lines to create an in-memory storage of dashboard data sources. Use the DataSourceInMemoryStorage.RegisterDataSource
-            // method to register the existing data source in the created storage.
-            //var dataSourceStorage = new DataSourceInMemoryStorage();
-            //DashboardConfigurator.Default.SetDataSourceStorage(dataSourceStorage);
-
-            var dbDashboardStorage = new AppCustomDashboardStorage();
-            DashboardConfigurator.Default.SetDashboardStorage(dbDashboardStorage);
-            //DashboardConfigurator.Default.SetDashboardStateService(new AppCustomDashboardStateService());
+            var dataSourceStorage = new DataSourceInMemoryStorage();
+            DashboardConfigurator.Default.SetDataSourceStorage(dataSourceStorage);
+            var objDataSource = new DashboardObjectDataSource(DashboardUtilities.OBJECT_DATASOURCE_NAME, typeof(DataTable)) {
+                DataSource = typeof(DataTable)
+            };
+            dataSourceStorage.RegisterDataSource(DashboardUtilities.OBJECT_DATASOURCE_ID, objDataSource.SaveToXml());
         }
     }
 }
