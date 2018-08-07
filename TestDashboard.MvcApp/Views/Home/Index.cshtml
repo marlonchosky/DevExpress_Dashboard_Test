@@ -1,0 +1,64 @@
+﻿@using System.Web.UI.WebControls
+@using DevExpress.DashboardWeb
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+
+    <link href="~/App_ClientResources/Libraries/DevExtreme/css/dx.common.css" rel="stylesheet" />
+    <link href="~/App_ClientResources/Libraries/DevExtreme/css/dx.light.css" rel="stylesheet" />
+
+    @Html.DevExpress().GetStyleSheets(
+        new StyleSheet { ExtensionSuite = ExtensionSuite.Dashboard })
+
+    <script src="~/App_ClientResources/Libraries/jquery/jquery.js"></script>
+    <script src="~/App_ClientResources/Libraries/jquery-ui/jquery-ui.js"></script>
+    <script src="~/App_ClientResources/Libraries/knockout/knockout.js"></script>
+
+    <script src="~/App_ClientResources/Libraries/cldrjs/cldr.js"></script>
+    <script src="~/App_ClientResources/Libraries/cldrjs/cldr/event.js"></script>
+    <script src="~/App_ClientResources/Libraries/cldrjs/cldr/supplemental.js"></script>
+
+    <script src="~/App_ClientResources/Libraries/globalize/globalize.js"></script>
+    <script src="~/App_ClientResources/Libraries/globalize/globalize/message.js"></script>
+    <script src="~/App_ClientResources/Libraries/globalize/globalize/number.js"></script>
+    <script src="~/App_ClientResources/Libraries/globalize/globalize/currency.js"></script>
+    <script src="~/App_ClientResources/Libraries/globalize/globalize/date.js"></script>
+
+
+    @*<script src="~/App_ClientResources/Libraries/requirejs/require.js"></script>*@
+
+    @*<script src="~/App_ClientResources/Libraries/ace/ace.js"></script>
+        <script src="~/App_ClientResources/Libraries/ace/ext/language_tools.js"></script>
+        <script src="~/App_ClientResources/Libraries/ace/theme/dreamweaver.js"></script>
+        <script src="~/App_ClientResources/Libraries/ace/theme/ambiance.js"></script>*@
+
+    <script src="~/App_ClientResources/Libraries/DevExtreme/js/dx.all.js"></script>
+
+    @Html.DevExpress().GetScripts(
+        new Script { ExtensionSuite = ExtensionSuite.Dashboard }
+    )
+    <script src="~/App_ClientResources/App_Scripts/Index/index.main.js"></script>
+</head>
+<body>
+    <button id="btnCargar">Cargar dashboard</button>
+
+    <div>
+
+        @Html.DevExpress().Dashboard(settings => {
+       settings.Name = "dashboard";
+       //settings.InitialDashboardId = "dashboard2";
+       settings.Width = Unit.Percentage(100);
+       settings.Height = Unit.Pixel(600);
+       settings.WorkingMode = WorkingMode.Viewer;
+       settings.ClientSideEvents.BeforeRender = "dashboard_onBeforeRender";
+   }).GetHtml()
+    </div>
+</body>
+</html>

@@ -1,0 +1,368 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{11A3CBAC-7CBB-49B1-A9BD-4E0561AB569D}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TestDashboard.MvcApp</RootNamespace>
+    <AssemblyName>TestDashboard.MvcApp</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Charts.v18.1.Core, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Dashboard.v18.1.Core, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Dashboard.v18.1.Web.WebForms, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Dashboard.v18.1.Web, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Dashboard.v18.1.Web.Mvc5, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataAccess.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Map.v18.1.Core, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v18.1.Core, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Pdf.v18.1.Core, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.PivotGrid.v18.1.Core, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v18.1.Core, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v18.1.Core, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v18.1.Export, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Sparkline.v18.1.Core, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.TreeMap.v18.1.Core, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Web.ASPxThemes.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Web.Mvc5.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Web.Resources.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Web.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGauges.v18.1.Core, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGauges.v18.1.Presets, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGauges.v18.1.Win, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraMap.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.CodeParser.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeMap.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.1\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.0.0\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.0.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.0.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.0.0\lib\net45\Microsoft.AI.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.0.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.0.0\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Web.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Webpages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Deployment">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Webpages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Webpages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_ClientResources\App_Scripts\Index\index.main.js" />
+    <Content Include="App_ClientResources\Libraries\ace\ace.js" />
+    <Content Include="App_ClientResources\Libraries\ace\ext\language_tools.js" />
+    <Content Include="App_ClientResources\Libraries\ace\theme\ambiance.css" />
+    <Content Include="App_ClientResources\Libraries\ace\theme\ambiance.js" />
+    <Content Include="App_ClientResources\Libraries\ace\theme\dreamweaver.css" />
+    <Content Include="App_ClientResources\Libraries\ace\theme\dreamweaver.js" />
+    <Content Include="App_ClientResources\Libraries\cldrjs\cldr.js" />
+    <Content Include="App_ClientResources\Libraries\cldrjs\cldr\event.js" />
+    <Content Include="App_ClientResources\Libraries\cldrjs\cldr\supplemental.js" />
+    <Content Include="App_ClientResources\Libraries\cldrjs\cldr\unresolved.js" />
+    <Content Include="App_ClientResources\Libraries\DevExtreme\css\dx.android5.light.css" />
+    <Content Include="App_ClientResources\Libraries\DevExtreme\css\dx.carmine.compact.css" />
+    <Content Include="App_ClientResources\Libraries\DevExtreme\css\dx.carmine.css" />
+    <Content Include="App_ClientResources\Libraries\DevExtreme\css\dx.common.css" />
+    <Content Include="App_ClientResources\Libraries\DevExtreme\css\dx.contrast.compact.css" />
+    <Content Include="App_ClientResources\Libraries\DevExtreme\css\dx.contrast.css" />
+    <Content Include="App_ClientResources\Libraries\DevExtreme\css\dx.dark.compact.css" />
+    <Content Include="App_ClientResources\Libraries\DevExtreme\css\dx.dark.css" />
+    <Content Include="App_ClientResources\Libraries\DevExtreme\css\dx.darkmoon.compact.css" />
+    <Content Include="App_ClientResources\Libraries\DevExtreme\css\dx.darkmoon.css" />
+    <Content Include="App_ClientResources\Libraries\DevExtreme\css\dx.darkviolet.compact.css" />
+    <Content Include="App_ClientResources\Libraries\DevExtreme\css\dx.darkviolet.css" />
+    <Content Include="App_ClientResources\Libraries\DevExtreme\css\dx.greenmist.compact.css" />
+    <Content Include="App_ClientResources\Libraries\DevExtreme\css\dx.greenmist.css" />
+    <Content Include="App_ClientResources\Libraries\DevExtreme\css\dx.ios7.default.css" />
+    <Content Include="App_ClientResources\Libraries\DevExtreme\css\dx.light.compact.css" />
+    <Content Include="App_ClientResources\Libraries\DevExtreme\css\dx.light.css" />
+    <Content Include="App_ClientResources\Libraries\DevExtreme\css\dx.material.blue.light.css" />
+    <Content Include="App_ClientResources\Libraries\DevExtreme\css\dx.material.lime.light.css" />
+    <Content Include="App_ClientResources\Libraries\DevExtreme\css\dx.material.orange.light.css" />
+    <Content Include="App_ClientResources\Libraries\DevExtreme\css\dx.material.purple.light.css" />
+    <Content Include="App_ClientResources\Libraries\DevExtreme\css\dx.material.teal.light.css" />
+    <Content Include="App_ClientResources\Libraries\DevExtreme\css\dx.softblue.compact.css" />
+    <Content Include="App_ClientResources\Libraries\DevExtreme\css\dx.softblue.css" />
+    <Content Include="App_ClientResources\Libraries\DevExtreme\css\dx.spa.css" />
+    <Content Include="App_ClientResources\Libraries\DevExtreme\css\dx.win10.black.css" />
+    <Content Include="App_ClientResources\Libraries\DevExtreme\css\dx.win10.white.css" />
+    <Content Include="App_ClientResources\Libraries\DevExtreme\css\dx.win8.black.css" />
+    <Content Include="App_ClientResources\Libraries\DevExtreme\css\dx.win8.white.css" />
+    <Content Include="App_ClientResources\Libraries\DevExtreme\js\angular.js" />
+    <Content Include="App_ClientResources\Libraries\DevExtreme\js\angular.min.js" />
+    <Content Include="App_ClientResources\Libraries\DevExtreme\js\aspnet\dx.aspnet.data.js" />
+    <Content Include="App_ClientResources\Libraries\DevExtreme\js\aspnet\dx.aspnet.mvc.js" />
+    <Content Include="App_ClientResources\Libraries\DevExtreme\js\cldr.js" />
+    <Content Include="App_ClientResources\Libraries\DevExtreme\js\cldr.min.js" />
+    <Content Include="App_ClientResources\Libraries\DevExtreme\js\cldr\event.js" />
+    <Content Include="App_ClientResources\Libraries\DevExtreme\js\cldr\event.min.js" />
+    <Content Include="App_ClientResources\Libraries\DevExtreme\js\cldr\supplemental.js" />
+    <Content Include="App_ClientResources\Libraries\DevExtreme\js\cldr\supplemental.min.js" />
+    <Content Include="App_ClientResources\Libraries\DevExtreme\js\cldr\unresolved.js" />
+    <Content Include="App_ClientResources\Libraries\DevExtreme\js\cldr\unresolved.min.js" />
+    <Content Include="App_ClientResources\Libraries\DevExtreme\js\dx.all.debug.js" />
+    <Content Include="App_ClientResources\Libraries\DevExtreme\js\dx.all.js" />
+    <Content Include="App_ClientResources\Libraries\DevExtreme\js\dx.mobile.debug.js" />
+    <Content Include="App_ClientResources\Libraries\DevExtreme\js\dx.mobile.js" />
+    <Content Include="App_ClientResources\Libraries\DevExtreme\js\dx.viz-web.debug.js" />
+    <Content Include="App_ClientResources\Libraries\DevExtreme\js\dx.viz-web.js" />
+    <Content Include="App_ClientResources\Libraries\DevExtreme\js\dx.viz.debug.js" />
+    <Content Include="App_ClientResources\Libraries\DevExtreme\js\dx.viz.js" />
+    <Content Include="App_ClientResources\Libraries\DevExtreme\js\dx.web.debug.js" />
+    <Content Include="App_ClientResources\Libraries\DevExtreme\js\dx.web.js" />
+    <Content Include="App_ClientResources\Libraries\DevExtreme\js\globalize.js" />
+    <Content Include="App_ClientResources\Libraries\DevExtreme\js\globalize.min.js" />
+    <Content Include="App_ClientResources\Libraries\DevExtreme\js\globalize\currency.js" />
+    <Content Include="App_ClientResources\Libraries\DevExtreme\js\globalize\currency.min.js" />
+    <Content Include="App_ClientResources\Libraries\DevExtreme\js\globalize\date.js" />
+    <Content Include="App_ClientResources\Libraries\DevExtreme\js\globalize\date.min.js" />
+    <Content Include="App_ClientResources\Libraries\DevExtreme\js\globalize\message.js" />
+    <Content Include="App_ClientResources\Libraries\DevExtreme\js\globalize\message.min.js" />
+    <Content Include="App_ClientResources\Libraries\DevExtreme\js\globalize\number.js" />
+    <Content Include="App_ClientResources\Libraries\DevExtreme\js\globalize\number.min.js" />
+    <Content Include="App_ClientResources\Libraries\DevExtreme\js\jquery.js" />
+    <Content Include="App_ClientResources\Libraries\DevExtreme\js\jquery.min.js" />
+    <Content Include="App_ClientResources\Libraries\DevExtreme\js\jszip.js" />
+    <Content Include="App_ClientResources\Libraries\DevExtreme\js\jszip.min.js" />
+    <Content Include="App_ClientResources\Libraries\DevExtreme\js\knockout-latest.debug.js" />
+    <Content Include="App_ClientResources\Libraries\DevExtreme\js\knockout-latest.js" />
+    <Content Include="App_ClientResources\Libraries\DevExtreme\js\localization\dx.messages.cs.js" />
+    <Content Include="App_ClientResources\Libraries\DevExtreme\js\localization\dx.messages.de.js" />
+    <Content Include="App_ClientResources\Libraries\DevExtreme\js\localization\dx.messages.en.js" />
+    <Content Include="App_ClientResources\Libraries\DevExtreme\js\localization\dx.messages.es.js" />
+    <Content Include="App_ClientResources\Libraries\DevExtreme\js\localization\dx.messages.fi.js" />
+    <Content Include="App_ClientResources\Libraries\DevExtreme\js\localization\dx.messages.fr.js" />
+    <Content Include="App_ClientResources\Libraries\DevExtreme\js\localization\dx.messages.it.js" />
+    <Content Include="App_ClientResources\Libraries\DevExtreme\js\localization\dx.messages.ja.js" />
+    <Content Include="App_ClientResources\Libraries\DevExtreme\js\localization\dx.messages.pt.js" />
+    <Content Include="App_ClientResources\Libraries\DevExtreme\js\localization\dx.messages.ru.js" />
+    <Content Include="App_ClientResources\Libraries\DevExtreme\js\localization\dx.messages.sv.js" />
+    <Content Include="App_ClientResources\Libraries\DevExtreme\js\localization\dx.messages.zh.js" />
+    <Content Include="App_ClientResources\Libraries\DevExtreme\js\vectormap-data\africa.js" />
+    <Content Include="App_ClientResources\Libraries\DevExtreme\js\vectormap-data\canada.js" />
+    <Content Include="App_ClientResources\Libraries\DevExtreme\js\vectormap-data\eurasia.js" />
+    <Content Include="App_ClientResources\Libraries\DevExtreme\js\vectormap-data\europe.js" />
+    <Content Include="App_ClientResources\Libraries\DevExtreme\js\vectormap-data\usa.js" />
+    <Content Include="App_ClientResources\Libraries\DevExtreme\js\vectormap-data\world.js" />
+    <Content Include="App_ClientResources\Libraries\DevExtreme\js\vectormap-utils\dx.vectormaputils.debug.js" />
+    <Content Include="App_ClientResources\Libraries\DevExtreme\js\vectormap-utils\dx.vectormaputils.js" />
+    <Content Include="App_ClientResources\Libraries\DevExtreme\js\vectormap-utils\dx.vectormaputils.node.js" />
+    <Content Include="App_ClientResources\Libraries\globalize\globalize-runtime.js" />
+    <Content Include="App_ClientResources\Libraries\globalize\globalize.js" />
+    <Content Include="App_ClientResources\Libraries\globalize\globalize\currency.js" />
+    <Content Include="App_ClientResources\Libraries\globalize\globalize\date.js" />
+    <Content Include="App_ClientResources\Libraries\globalize\globalize\message.js" />
+    <Content Include="App_ClientResources\Libraries\globalize\globalize\number.js" />
+    <Content Include="App_ClientResources\Libraries\globalize\globalize\plural.js" />
+    <Content Include="App_ClientResources\Libraries\globalize\globalize\relative-time.js" />
+    <Content Include="App_ClientResources\Libraries\globalize\globalize\unit.js" />
+    <Content Include="App_ClientResources\Libraries\jquery-ui\jquery-ui.js" />
+    <Content Include="App_ClientResources\Libraries\jquery-ui\jquery-ui.min.js" />
+    <Content Include="App_ClientResources\Libraries\jquery\core.js" />
+    <Content Include="App_ClientResources\Libraries\jquery\jquery.js" />
+    <Content Include="App_ClientResources\Libraries\jquery\jquery.min.js" />
+    <Content Include="App_ClientResources\Libraries\jquery\jquery.slim.js" />
+    <Content Include="App_ClientResources\Libraries\jquery\jquery.slim.min.js" />
+    <Content Include="App_ClientResources\Libraries\knockout\knockout.debug.js" />
+    <Content Include="App_ClientResources\Libraries\knockout\knockout.js" />
+    <Content Include="App_ClientResources\Libraries\requirejs\require.js" />
+    <Content Include="App_Data\TestDB.mdf" />
+    <Content Include="App_Data\TestDB_log.ldf">
+      <DependentUpon>TestDB.mdf</DependentUpon>
+    </Content>
+    <Content Include="Global.asax" />
+    <Content Include="scripts\ai.0.22.9-build00167.js" />
+    <Content Include="scripts\ai.0.22.9-build00167.min.js" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\DashboardConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="DomainModel\TabIndicador.cs" />
+    <Compile Include="DomainModel\TabIndicadorRepository.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Infrastructure\Dashboard\AppCustomDashboardStorage.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\web.config" />
+    <Content Include="packages.config" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="App_ClientResources\Libraries\DevExtreme\css\fonts\Roboto-300.ttf" />
+    <Content Include="App_ClientResources\Libraries\DevExtreme\css\fonts\Roboto-300.woff" />
+    <Content Include="App_ClientResources\Libraries\DevExtreme\css\fonts\Roboto-300.woff2" />
+    <Content Include="App_ClientResources\Libraries\DevExtreme\css\fonts\Roboto-400.ttf" />
+    <Content Include="App_ClientResources\Libraries\DevExtreme\css\fonts\Roboto-400.woff" />
+    <Content Include="App_ClientResources\Libraries\DevExtreme\css\fonts\Roboto-400.woff2" />
+    <Content Include="App_ClientResources\Libraries\DevExtreme\css\fonts\Roboto-500.ttf" />
+    <Content Include="App_ClientResources\Libraries\DevExtreme\css\fonts\Roboto-500.woff" />
+    <Content Include="App_ClientResources\Libraries\DevExtreme\css\fonts\Roboto-500.woff2" />
+    <Content Include="App_ClientResources\Libraries\DevExtreme\css\icons\dxicons.ttf" />
+    <Content Include="App_ClientResources\Libraries\DevExtreme\css\icons\dxicons.woff" />
+    <Content Include="App_ClientResources\Libraries\DevExtreme\css\icons\dxicons.woff2" />
+    <Content Include="App_ClientResources\Libraries\DevExtreme\css\icons\dxiconsios.ttf" />
+    <Content Include="App_ClientResources\Libraries\DevExtreme\css\icons\dxiconsios.woff" />
+    <Content Include="App_ClientResources\Libraries\DevExtreme\css\icons\dxiconsios.woff2" />
+    <Content Include="App_ClientResources\Libraries\DevExtreme\css\icons\dxiconsmaterial.ttf" />
+    <Content Include="App_ClientResources\Libraries\DevExtreme\css\icons\dxiconsmaterial.woff" />
+    <Content Include="App_ClientResources\Libraries\DevExtreme\css\icons\dxiconsmaterial.woff2" />
+    <Content Include="App_ClientResources\Libraries\jquery\jquery.min.map" />
+    <Content Include="App_ClientResources\Libraries\jquery\jquery.slim.min.map" />
+    <Content Include="App_Data\SqlSchemaCompare1.scmp" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>2306</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:2306/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
