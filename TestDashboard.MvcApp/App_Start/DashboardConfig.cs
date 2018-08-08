@@ -1,4 +1,3 @@
-using System.Data;
 using System.Web.Routing;
 using DevExpress.DashboardCommon;
 using DevExpress.DashboardWeb;
@@ -11,14 +10,14 @@ namespace TestDashboard.MvcApp {
             routes.MapDashboardRoute();
 
             DashboardConfigurator.Default.SetDashboardStorage(new AppCustomDashboardStorage());
-            DashboardConfigurator.Default.SetObjectDataSourceCustomFillService(new AppCustomObjectDataSourceFillService());
 
             var dataSourceStorage = new DataSourceInMemoryStorage();
             DashboardConfigurator.Default.SetDataSourceStorage(dataSourceStorage);
-            var objDataSource = new DashboardObjectDataSource(DashboardUtilities.OBJECT_DATASOURCE_NAME, typeof(DataTable)) {
-                DataSource = typeof(DataTable)
-            };
+            var objDataSource = new DashboardObjectDataSource(DashboardUtilities.OBJECT_DATASOURCE_NAME);
             dataSourceStorage.RegisterDataSource(DashboardUtilities.OBJECT_DATASOURCE_ID, objDataSource.SaveToXml());
+
+            //DashboardConfigurator.Default.SetObjectDataSourceCustomFillService(new AppCustomObjectDataSourceFillService());
+            DashboardConfigurator.Default.DataLoading += AppCustomDefaultOnDataLoading.DefaultOnDataLoading;
         }
     }
 }
