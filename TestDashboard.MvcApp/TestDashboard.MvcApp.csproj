@@ -160,6 +160,10 @@
     <Content Include="App_ClientResources\Libraries\cldrjs\cldr\event.js" />
     <Content Include="App_ClientResources\Libraries\cldrjs\cldr\supplemental.js" />
     <Content Include="App_ClientResources\Libraries\cldrjs\cldr\unresolved.js" />
+    <Content Include="App_ClientResources\Libraries\DevExpress\Dashboard\dx.dashboard-control.bundle.css" />
+    <Content Include="App_ClientResources\Libraries\DevExpress\Dashboard\dx.dashboard-control.bundle.js" />
+    <Content Include="App_ClientResources\Libraries\DevExpress\Dashboard\dx.dashboard-control.bundle.min.js" />
+    <Content Include="App_ClientResources\Libraries\DevExpress\Dashboard\dx.dashboard-control.third-party.min.js" />
     <Content Include="App_ClientResources\Libraries\DevExtreme\css\dx.android5.light.css" />
     <Content Include="App_ClientResources\Libraries\DevExtreme\css\dx.carmine.compact.css" />
     <Content Include="App_ClientResources\Libraries\DevExtreme\css\dx.carmine.css" />
@@ -319,6 +323,7 @@
     <Content Include="App_ClientResources\Libraries\jquery\jquery.min.map" />
     <Content Include="App_ClientResources\Libraries\jquery\jquery.slim.min.map" />
     <Content Include="App_Data\SqlSchemaCompare1.scmp" />
+    <None Include="Views\Home\Index_Html.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -327,6 +332,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="App_ClientResources\Libraries\DevExpress\Dashboard\icons\" />
     <Folder Include="App_Data\Dashboards_Files\" />
     <Folder Include="Models\" />
   </ItemGroup>

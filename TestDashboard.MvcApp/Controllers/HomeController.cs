@@ -5,5 +5,9 @@ namespace TestDashboard.MvcApp.Controllers {
         public ActionResult Index() {
             return View();
         }
+
+        public ActionResult Index_Html() {
+            return View();
+        }
     }
 }
