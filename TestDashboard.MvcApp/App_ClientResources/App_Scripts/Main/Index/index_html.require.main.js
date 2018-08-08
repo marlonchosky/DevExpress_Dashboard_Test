@@ -72,7 +72,6 @@
          main) => {
             main.fn_start();
             console.log(globalize);
-            //console.log(dx_all);
             //console.log(dx_dashboard_bundle);
         }
     );
