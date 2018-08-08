@@ -149,7 +149,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_ClientResources\App_Scripts\Index\index.main.js" />
+    <Content Include="App_ClientResources\App_Scripts\Infrastructure\app.infrastructure.routes.__noumd.js" />
+    <Content Include="App_ClientResources\App_Scripts\Main\Index\index_html.require.main.js" />
+    <Content Include="App_ClientResources\App_Scripts\Main\Index\index_html.main.js" />
+    <Content Include="App_ClientResources\App_Scripts\Main\Index\index.main.js" />
     <Content Include="App_ClientResources\Libraries\ace\ace.js" />
     <Content Include="App_ClientResources\Libraries\ace\ext\language_tools.js" />
     <Content Include="App_ClientResources\Libraries\ace\theme\ambiance.css" />

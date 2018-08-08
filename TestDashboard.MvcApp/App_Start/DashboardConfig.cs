@@ -7,7 +7,8 @@ using TestDashboard.MvcApp.Infrastructure.Dashboard;
 namespace TestDashboard.MvcApp {
     public class DashboardConfig {
         public static void RegisterService(RouteCollection routes) {
-            routes.MapDashboardRoute();
+            //routes.MapDashboardRoute();
+            routes.MapDashboardRoute("api/dashboardControl");
 
             DashboardConfigurator.Default.SetDashboardStorage(new AppCustomDashboardStorage());
 
