@@ -150,6 +150,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_ClientResources\App_Scripts\Infrastructure\app.infrastructure.routes.__noumd.js" />
+    <Content Include="App_ClientResources\App_Scripts\Main\Index\index_html2.main.js" />
     <Content Include="App_ClientResources\App_Scripts\Main\Index\index_prueba.main.js" />
     <Content Include="App_ClientResources\App_Scripts\Main\Index\index_html.require.main.js" />
     <Content Include="App_ClientResources\App_Scripts\Main\Index\index_html.main.js" />
@@ -327,7 +328,10 @@
     <Content Include="App_ClientResources\Libraries\jquery\jquery.min.map" />
     <Content Include="App_ClientResources\Libraries\jquery\jquery.slim.min.map" />
     <Content Include="App_Data\SqlSchemaCompare1.scmp" />
+    <Content Include="App_ClientResources\Libraries\DevExpress\Dashboard\icons\dxicons.ttf" />
+    <Content Include="App_ClientResources\Libraries\DevExpress\Dashboard\icons\dxicons.woff" />
     <None Include="Views\Home\Index_Html.cshtml" />
+    <None Include="Views\Home\Index_Html2.cshtml" />
     <None Include="Views\Home\Index_Prueba.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -337,7 +341,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_ClientResources\Libraries\DevExpress\Dashboard\icons\" />
     <Folder Include="App_Data\Dashboards_Files\" />
     <Folder Include="Models\" />
   </ItemGroup>

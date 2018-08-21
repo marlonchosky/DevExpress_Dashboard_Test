@@ -14,9 +14,27 @@
     <link href="~/App_ClientResources/Libraries/DevExtreme/css/dx.light.css" rel="stylesheet" />
 
     <link href="~/App_ClientResources/Libraries/DevExpress/Dashboard/dx.dashboard-control.bundle.css" rel="stylesheet" />
+    
+    
+    
+    <script src="~/App_ClientResources/Libraries/jquery/jquery.js"></script>
+    <script src="~/App_ClientResources/Libraries/jquery-ui/jquery-ui.js"></script>
+    <script src="~/App_ClientResources/Libraries/knockout/knockout.js"></script>
+
+    <script src="~/App_ClientResources/Libraries/cldrjs/cldr.js"></script>
+    <script src="~/App_ClientResources/Libraries/cldrjs/cldr/event.js"></script>
+    <script src="~/App_ClientResources/Libraries/cldrjs/cldr/supplemental.js"></script>
+
+    <script src="~/App_ClientResources/Libraries/globalize/globalize.js"></script>
+    <script src="~/App_ClientResources/Libraries/globalize/globalize/message.js"></script>
+    <script src="~/App_ClientResources/Libraries/globalize/globalize/number.js"></script>
+    <script src="~/App_ClientResources/Libraries/globalize/globalize/currency.js"></script>
+    <script src="~/App_ClientResources/Libraries/globalize/globalize/date.js"></script>
+    
+    <script src="~/App_ClientResources/Libraries/DevExpress/Dashboard/dx.dashboard-control.bundle.js"></script>
 </head>
 <body>
-    @*<label for="txtIdIndicador">ID Indicador:</label>
+    <label for="txtIdIndicador">ID Indicador:</label>
     <input type="text" value="" id="txtIdIndicador" />
     <label for="cboTipo">Tipo:</label>
     <select id="cboTipo">
@@ -31,23 +49,10 @@
 
     <button id="btnCargar">Cargar dashboard</button>
 
-    <div id="web-dashboard"></div>*@
+    <div id="web-dashboard" style="height: 500px"></div>
     
-    @*<script src="~/App_ClientResources/Libraries/jquery/jquery.js"></script>
-    <script src="~/App_ClientResources/Libraries/jquery-ui/jquery-ui.js"></script>
-    <script src="~/App_ClientResources/Libraries/knockout/knockout.js"></script>
 
-    <script src="~/App_ClientResources/Libraries/cldrjs/cldr.js"></script>
-    <script src="~/App_ClientResources/Libraries/cldrjs/cldr/event.js"></script>
-    <script src="~/App_ClientResources/Libraries/cldrjs/cldr/supplemental.js"></script>
-
-    <script src="~/App_ClientResources/Libraries/globalize/globalize.js"></script>
-    <script src="~/App_ClientResources/Libraries/globalize/globalize/message.js"></script>
-    <script src="~/App_ClientResources/Libraries/globalize/globalize/number.js"></script>
-    <script src="~/App_ClientResources/Libraries/globalize/globalize/currency.js"></script>
-    <script src="~/App_ClientResources/Libraries/globalize/globalize/date.js"></script>
-
-    <script src="~/App_ClientResources/Libraries/DevExpress/Dashboard/dx.dashboard-control.bundle.js"></script>*@
+    @*<script src="~/App_ClientResources/Libraries/DevExpress/Dashboard/dx.dashboard-control.bundle.js"></script>*@
 
     @*<script src="~/App_ClientResources/Libraries/requirejs/require.js"></script>*@
     
@@ -60,6 +65,7 @@
     @*<script src="~/App_ClientResources/Libraries/DevExtreme/js/dx.all.js"></script>*@
     
     
+    
     <button id="btnEjemplo1">Ejemplito</button>
     
 
@@ -69,8 +75,11 @@
             base: '@Url.Content("~")'
         };
     </script>
-    <script src="~/App_ClientResources/App_Scripts/Infrastructure/app.infrastructure.routes.__noumd.js"></script>
+    
+    <script src="~/App_ClientResources/App_Scripts/Main/Index/index_html.main.js"></script>
+
+    @*<script src="~/App_ClientResources/App_Scripts/Infrastructure/app.infrastructure.routes.__noumd.js"></script>
     <script src="~/App_ClientResources/Libraries/requirejs/require.js"></script>
-    <script src="~/App_ClientResources/App_Scripts/Main/Index/index_html.require.main.js"></script>
+    <script src="~/App_ClientResources/App_Scripts/Main/Index/index_html.require.main.js"></script>*@
 </body>
 </html>

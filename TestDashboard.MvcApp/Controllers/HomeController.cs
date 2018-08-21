@@ -10,6 +10,10 @@ namespace TestDashboard.MvcApp.Controllers {
             return View();
         }
 
+        public ActionResult Index_Html2() {
+            return View();
+        }
+
         public ActionResult Index_Prueba() {
             return View();
         }
