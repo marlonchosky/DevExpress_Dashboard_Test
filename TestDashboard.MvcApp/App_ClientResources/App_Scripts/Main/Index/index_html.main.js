@@ -45,7 +45,6 @@ var init = function () {
     btnCargar = $('#btnCargar');
     btnCargar.click(btnCargar_onclick);
 
-    //js-DevExpress.Dashboard.ResourceManager.embedBundledResources();
     DevExpress.Dashboard.ResourceManager.embedBundledResources();
     dashboardControl = new DevExpress.Dashboard.DashboardControl(document.getElementById('web-dashboard'), {
         endpoint: '/api/dashboardControl'

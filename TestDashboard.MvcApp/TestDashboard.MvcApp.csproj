@@ -165,8 +165,15 @@
     <Content Include="App_ClientResources\Libraries\cldrjs\cldr\event.js" />
     <Content Include="App_ClientResources\Libraries\cldrjs\cldr\supplemental.js" />
     <Content Include="App_ClientResources\Libraries\cldrjs\cldr\unresolved.js" />
-    <Content Include="App_ClientResources\Libraries\DevExpress\Dashboard\dx.dashboard-control.bundle.css" />
+    <Content Include="App_ClientResources\Libraries\DevExpress\Dashboard.old\dx.dashboard-control.bundle.css" />
+    <Content Include="App_ClientResources\Libraries\DevExpress\Dashboard.old\dx.dashboard-control.bundle.js" />
+    <Content Include="App_ClientResources\Libraries\DevExpress\Dashboard.old\dx.dashboard-control.bundle.min.js" />
+    <Content Include="App_ClientResources\Libraries\DevExpress\Dashboard.old\dx.dashboard-control.third-party.min.js" />
+    <Content Include="App_ClientResources\Libraries\DevExpress\Dashboard\dx.dashboard-control.bundle.dark.compact.css" />
+    <Content Include="App_ClientResources\Libraries\DevExpress\Dashboard\dx.dashboard-control.bundle.dark.css" />
     <Content Include="App_ClientResources\Libraries\DevExpress\Dashboard\dx.dashboard-control.bundle.js" />
+    <Content Include="App_ClientResources\Libraries\DevExpress\Dashboard\dx.dashboard-control.bundle.light.compact.css" />
+    <Content Include="App_ClientResources\Libraries\DevExpress\Dashboard\dx.dashboard-control.bundle.light.css" />
     <Content Include="App_ClientResources\Libraries\DevExpress\Dashboard\dx.dashboard-control.bundle.min.js" />
     <Content Include="App_ClientResources\Libraries\DevExpress\Dashboard\dx.dashboard-control.third-party.min.js" />
     <Content Include="App_ClientResources\Libraries\DevExtreme\css\dx.android5.light.css" />
@@ -328,6 +335,8 @@
     <Content Include="App_ClientResources\Libraries\jquery\jquery.min.map" />
     <Content Include="App_ClientResources\Libraries\jquery\jquery.slim.min.map" />
     <Content Include="App_Data\SqlSchemaCompare1.scmp" />
+    <Content Include="App_ClientResources\Libraries\DevExpress\Dashboard.old\icons\dxicons.ttf" />
+    <Content Include="App_ClientResources\Libraries\DevExpress\Dashboard.old\icons\dxicons.woff" />
     <Content Include="App_ClientResources\Libraries\DevExpress\Dashboard\icons\dxicons.ttf" />
     <Content Include="App_ClientResources\Libraries\DevExpress\Dashboard\icons\dxicons.woff" />
     <None Include="Views\Home\Index_Html.cshtml" />
