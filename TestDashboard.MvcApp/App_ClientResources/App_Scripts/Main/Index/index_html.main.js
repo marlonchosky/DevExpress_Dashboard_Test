@@ -1,4 +1,5 @@
-﻿/// <reference path="../../../Libraries/requirejs/require.js" />
+﻿/// <reference path="../../../Libraries/DevExtreme/js/dx.all.js" />
+/// <reference path="../../../Libraries/requirejs/require.js" />
 
 //define(['jquery', 'jquery.ui'], ($, jquery_ui) => {
 //    var fn_start = function () {
@@ -11,7 +12,7 @@
 //});
 
 
-//'use strict';
+'use strict';
 var dashboardControl;
 var btnCargar;
 var idIndicador = null;

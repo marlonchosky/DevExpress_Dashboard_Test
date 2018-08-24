@@ -11,6 +11,7 @@ namespace TestDashboard.MvcApp {
             routes.MapDashboardRoute("api/dashboardControl");
 
             DashboardConfigurator.Default.SetDashboardStorage(new AppCustomDashboardStorage());
+            //DashboardConfigurator.Default.SetDashboardStorage(new DashboardFileStorage("~/App_Data/Dashboards_Files"));
 
             var dataSourceStorage = new DataSourceInMemoryStorage();
             DashboardConfigurator.Default.SetDataSourceStorage(dataSourceStorage);
