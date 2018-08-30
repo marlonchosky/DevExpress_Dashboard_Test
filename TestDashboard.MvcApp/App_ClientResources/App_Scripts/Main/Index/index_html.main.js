@@ -38,7 +38,7 @@ var fn_loaddashboard_done = function () {
 };
 var btnCargar_onclick = function () {
     debugger;
-    dashboardControl.loadDashboard('1')
+    dashboardControl.loadDashboard('2')
         .done(fn_loaddashboard_done);
 };
 

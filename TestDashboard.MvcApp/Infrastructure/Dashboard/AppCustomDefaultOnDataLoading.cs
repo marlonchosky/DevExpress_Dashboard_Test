@@ -8,9 +8,9 @@ using TestDashboard.MvcApp.DomainModel;
 namespace TestDashboard.MvcApp.Infrastructure.Dashboard {
     public static class AppCustomDefaultOnDataLoading {
         public static void DefaultOnDataLoading(object sender, DataLoadingWebEventArgs e) {
-            if (e.DataSourceName == DashboardUtilities.OBJECT_DATASOURCE_NAME) {
+            //if (e.DataSourceName == DashboardUtilities.OBJECT_DATASOURCE_NAME) {
                 e.Data = GetData(e);
-            }
+            
         }
 
         private static object GetData(DataLoadingWebEventArgs e) {
@@ -28,7 +28,12 @@ namespace TestDashboard.MvcApp.Infrastructure.Dashboard {
                 return result;
             }
             if (tipoIndicador == "U") {
-                result = repo.ListarResultIndicator_Ind(idIndicador, fechaInicio, fechaFin);
+                if (idIndicador == 2) {
+                    result = repo.ListarResultIndicator_Ind2(idIndicador, fechaInicio, fechaFin);
+                } else {
+                    result = repo.ListarResultIndicator_Ind(idIndicador, fechaInicio, fechaFin);
+                }
+
             }
 
             return result;

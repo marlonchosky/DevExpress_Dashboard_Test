@@ -6,15 +6,50 @@
 
 <html>
 <head>
+    <meta name="viewport" content="width=device-width" />
     <title>title</title>
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    
+    <link href="~/App_ClientResources/Libraries/DevExpress/Dashboard/dx.dashboard-control.bundle.light.css" rel="stylesheet" />
+    <link href="~/App_ClientResources/Libraries/DevExtreme/css/dx.common.css" rel="stylesheet" />
+    <link href="~/App_ClientResources/Libraries/DevExtreme/css/dx.light.css" rel="stylesheet" />
 </head>
 <body>
+    <div class="dx-field">
+        <div class="dx-field-label">Fecha de Inicio:</div>
+        <div class="dx-field-value">
+            <div id="cboFechaInicio"></div>
+        </div>
+    </div>
+    
+    <div class="dx-field">
+        <div class="dx-field-label">Plataforma:</div>
+        <div class="dx-field-value">
+            <div id="cboPlataforma"></div>
+        </div>
+    </div>
+
     <button id="btnEjemplo1">Ejemplito 1</button>
     
+    <div id="web-dashboard" style="width: 100%; height: 500px;"></div>
+    
+
     <script src="~/App_ClientResources/Libraries/jquery/jquery.js"></script>
     <script src="~/App_ClientResources/Libraries/jquery-ui/jquery-ui.js"></script>
+    <script src="~/App_ClientResources/Libraries/knockout/knockout.js"></script>
+
+    <script src="~/App_ClientResources/Libraries/cldrjs/cldr.js"></script>
+    <script src="~/App_ClientResources/Libraries/cldrjs/cldr/event.js"></script>
+    <script src="~/App_ClientResources/Libraries/cldrjs/cldr/supplemental.js"></script>
+
+    <script src="~/App_ClientResources/Libraries/globalize/globalize.js"></script>
+    <script src="~/App_ClientResources/Libraries/globalize/globalize/message.js"></script>
+    <script src="~/App_ClientResources/Libraries/globalize/globalize/number.js"></script>
+    <script src="~/App_ClientResources/Libraries/globalize/globalize/currency.js"></script>
+    <script src="~/App_ClientResources/Libraries/globalize/globalize/date.js"></script>
     
+    <script src="~/App_ClientResources/Libraries/DevExpress/Dashboard/dx.dashboard-control.bundle.js"></script>
+    @*<script src="~/App_ClientResources/Libraries/DevExtreme/js/dx.all.js"></script>*@
+
     <script src="~/App_ClientResources/App_Scripts/Main/Index/index_prueba.main.js"></script>
 </body>
 </html>

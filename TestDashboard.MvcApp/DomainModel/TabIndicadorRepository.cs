@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Data;
 using System.Data.SqlClient;
+using System.IO;
+using System.Web;
 using System.Web.Configuration;
 
 namespace TestDashboard.MvcApp.DomainModel {
@@ -63,6 +65,28 @@ namespace TestDashboard.MvcApp.DomainModel {
             }
 
             return dt;
+        }
+
+        public DataTable ListarResultIndicator_Ind2(int idIndicador, DateTime fechaInicio, 
+            DateTime fechaFin) {
+            var dt = new DataTable("Table");
+            dt.Columns.Add("REPORT_DATE", typeof(DateTime));
+            dt.Columns.Add("REPORT_DATE_AUX", typeof(DateTime));
+            dt.Columns.Add("Gás Separator Bijupirá- FQI -1015-1 (km3)", typeof(decimal));
+            dt.Columns.Add("Gas Lift Bijupirá - FQI-0904-1 (km3)", typeof(decimal));
+
+
+            var ruta = $"{HttpRuntime.AppDomainAppPath}XMLs{Path.DirectorySeparatorChar}xmlDTPrueba.xml";
+            var fileStream = File.OpenRead(ruta);
+            dt.ReadXml(fileStream);
+            fileStream.Close();
+
+            var result = from r in dt.AsEnumerable()
+                         where r.Field<DateTime>("REPORT_DATE") >= fechaInicio
+                         && r.Field<DateTime>("REPORT_DATE") <= fechaFin
+                         select r;
+
+            return result.CopyToDataTable();
         }
     }
 }
