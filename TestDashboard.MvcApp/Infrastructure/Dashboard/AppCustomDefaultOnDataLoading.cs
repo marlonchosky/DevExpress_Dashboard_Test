@@ -2,6 +2,7 @@
 using System.Data;
 using System.Globalization;
 using System.Web;
+using DevExpress.DashboardCommon;
 using DevExpress.DashboardWeb;
 using TestDashboard.MvcApp.DomainModel;
 
@@ -37,6 +38,10 @@ namespace TestDashboard.MvcApp.Infrastructure.Dashboard {
             }
 
             return result;
+        }
+
+        public static void DefaultOnCustomParameters(object sender, CustomParametersWebEventArgs e) {
+            e.Parameters.Add(new DashboardParameter("ReloadingParameter", typeof(Guid), Guid.NewGuid()));
         }
     }
 }

@@ -19,6 +19,7 @@ namespace TestDashboard.MvcApp {
             dataSourceStorage.RegisterDataSource(DashboardUtilities.OBJECT_DATASOURCE_ID, objDataSource.SaveToXml());
 
             //DashboardConfigurator.Default.SetObjectDataSourceCustomFillService(new AppCustomObjectDataSourceFillService());
+            DashboardConfigurator.Default.CustomParameters += AppCustomDefaultOnDataLoading.DefaultOnCustomParameters;
             DashboardConfigurator.Default.DataLoading += AppCustomDefaultOnDataLoading.DefaultOnDataLoading;
         }
     }
